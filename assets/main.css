@@ -599,7 +599,8 @@ footer {
         border-left: none;
         font-size: 0;
         width: 46px;
-        line-height: initial; }
+        line-height: initial;
+        cursor: pointer; }
       .community-tab .content .mailing-block form input {
         width: 100%; }
     .community-tab .content .positions-block .positions-button {
@@ -1512,11 +1513,11 @@ footer {
           margin-left: 0; } }
     .project-slides .single-project-slide.c-project-01-what .animation [data-animation] {
       width: 80%; }
-    .project-slides .single-project-slide.c-project-06-values .slide-wrapper .content, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .content, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .content {
+    .project-slides .single-project-slide.c-project-06-principles .slide-wrapper .content, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .content, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .content {
       width: 100%; }
-      .project-slides .single-project-slide.c-project-06-values .slide-wrapper .content p, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .content p, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .content p {
+      .project-slides .single-project-slide.c-project-06-principles .slide-wrapper .content p, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .content p, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .content p {
         margin-bottom: 0; }
-    .project-slides .single-project-slide.c-project-06-values .slide-wrapper .animation, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .animation, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .animation {
+    .project-slides .single-project-slide.c-project-06-principles .slide-wrapper .animation, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .animation, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .animation {
       display: none; }
     .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper {
       display: flex;
