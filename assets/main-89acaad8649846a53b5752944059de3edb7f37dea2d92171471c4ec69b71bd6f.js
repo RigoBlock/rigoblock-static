@@ -392,6 +392,7 @@ $(function() {
   'use strict';
   var $mobileNav = $('.mobile-header .icon-nav, .mobile-fake-bkg');
   var $communityTab = $('.community-tab');
+  var $langTab = $('header.site-header > .languages');
   var $body = $('body');
   var $window = $(window);
 
@@ -400,6 +401,8 @@ $(function() {
     if (!$body.hasClass('mobile-nav-open')) {
       $communityTab.removeClass('open');
       $body.removeClass('community-open');
+      $langTab.removeClass('open');
+      $body.removeClass('languages-open');
     }
   };
 
@@ -511,6 +514,35 @@ $(function() {
     // other browser
     return false;
 })();
+$(function() {
+  'use strict';
+
+  var $body = $('body');
+
+  var $lang = $('.social-links-wrapper .languages');
+  var $languages = $lang.find('ul');
+  var $current = $lang.find('.current-lang');
+
+  var $tabletCurrent = $('.header-wrapper > .current-lang, .languages-icon-nav');
+  var $tabletLanguages = $('header.site-header > .languages');
+
+  var showLanguages = function(e) {
+    e.preventDefault();
+    $languages.slideToggle();
+    $lang.toggleClass('open');
+  };
+
+  $current.on('click', showLanguages);
+
+  var showTabletLanguages = function(e) {
+    e.preventDefault();
+    $tabletLanguages.toggleClass('open');
+    $body.toggleClass('languages-open');
+  };
+
+  $tabletCurrent.on('click', showTabletLanguages);
+});
+
 
 
 
