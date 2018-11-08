@@ -1118,7 +1118,8 @@ header.site-header .languages {
 
 #whitelist-button {
   top: 120px;
-  position: relative; }
+  position: relative;
+  z-index: 999; }
 
 .whitelist {
   font-weight: 700; }
@@ -1211,17 +1212,21 @@ header.site-header .languages {
 @media all and (min-width: 960px) and (max-width: 1023px) {
   #whitelist-button {
     top: 120px;
-    position: relative; } }
+    position: relative;
+    z-index: 999; } }
 @media all and (min-width: 801px) and (max-width: 959px) {
   #whitelist-button {
     top: 120px;
-    position: relative; } }
+    position: relative;
+    z-index: 999; } }
 @media all and (min-width: 769px) and (max-width: 800px) {
   .icon-ico-sale {
+    z-index: 999;
     margin-right: auto;
     margin-left: auto; }
 
   .ico-button-container {
+    z-index: 999;
     display: inline-block; }
 
   .shake {
@@ -1237,10 +1242,12 @@ header.site-header .languages {
             animation-duration: 1.5s; } }
 @media all and (min-width: 569px) and (max-width: 768px) {
   .icon-ico-sale {
+    z-index: 999;
     margin-right: auto;
     margin-left: auto; }
 
   .ico-button-container {
+    z-index: 999;
     display: inline-block; }
 
   .shake {
@@ -1257,7 +1264,8 @@ header.site-header .languages {
 @media all and (min-width: 481px) and (max-width: 568px) {
   #whitelist-button {
     top: 5px;
-    position: relative; }
+    position: relative;
+    z-index: 999; }
 
   .shake {
     -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -1273,10 +1281,12 @@ header.site-header .languages {
     text-align: center; }
 
   .icon-ico-sale {
+    z-index: 999;
     margin-right: auto;
     margin-left: auto; }
 
   .ico-button-container {
+    z-index: 999;
     display: inline-block; }
 
   @-webkit-keyframes fadeInOpacity {
@@ -1297,7 +1307,8 @@ header.site-header .languages {
 @media all and (min-width: 321px) and (max-width: 480px) {
   #whitelist-button {
     top: 5px;
-    position: relative; }
+    position: relative;
+    z-index: 999; }
 
   .shake {
     -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -1313,10 +1324,12 @@ header.site-header .languages {
     text-align: center; }
 
   .icon-ico-sale {
+    z-index: 999;
     margin-right: auto;
     margin-left: auto; }
 
   .ico-button-container {
+    z-index: 999;
     display: inline-block; }
 
   @-webkit-keyframes fadeInOpacity {
@@ -1337,7 +1350,8 @@ header.site-header .languages {
 @media all and (min-width: 0px) and (max-width: 320px) {
   #whitelist-button {
     top: 5px;
-    position: relative; }
+    position: relative;
+    z-index: 999; }
 
   .shake {
     -webkit-animation: shake 0.82s cubic-bezier(0.36, 0.07, 0.19, 0.97) both;
@@ -1353,10 +1367,12 @@ header.site-header .languages {
     text-align: center; }
 
   .icon-ico-sale {
+    z-index: 999;
     margin-right: auto;
     margin-left: auto; }
 
   .ico-button-container {
+    z-index: 999;
     display: inline-block; }
 
   @-webkit-keyframes fadeInOpacity {
