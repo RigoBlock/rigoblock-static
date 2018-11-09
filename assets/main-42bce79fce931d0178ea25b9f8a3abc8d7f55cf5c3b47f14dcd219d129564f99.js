@@ -159,32 +159,48 @@ $(function() {
   $body.imagesLoaded( { background: true }, loadedCB);
 });
 $(function() {
-  var $mainNav = $('.main-nav');
-  var $genericA = $mainNav.find('li:not([data-community]) > a');
-  var $navElements = $mainNav.find('li.parent > a');
-  var $subNavElements = $mainNav.find('[data-scroll-to]');
+  var $mainNav = $(".main-nav");
+  var $genericA = $mainNav.find("li:not([data-community]) > a");
+  var $navElements = $mainNav.find("li.parent > a");
+  var $subNavElements = $mainNav.find("[data-scroll-to]");
   var $window = $(window);
-  var $root = $('html, body');
+  var $root = $("html, body");
   var mainClickCallback = function(e) {
     var $target = $(e.target);
-    var linkTarget = $target.attr('href').split('#');
-    var currentUrl = window.location.href.split('#')[0];
+    var linkTarget = $target.attr("href").split("#");
+    var currentUrl = window.location.href.split("#")[0];
     if (linkTarget[0] === currentUrl) {
       e.preventDefault();
-      var $subnav = $target.next('ul');
-      var scrollTop = $('#project-01-what').offset().top;
-      $root.animate({
-        scrollTop: scrollTop
-      }, 500);
-      $subnav.slideToggle(500);
+      if (linkTarget[1] === "project-01-what") {
+        var $subnav = $target.next("ul");
+        var scrollTop = $("#project-01-what").offset().top;
+        $root.animate(
+          {
+            scrollTop: scrollTop
+          },
+          250
+        );
+        // $subnav.slideToggle(500);
+      }
+      if (linkTarget[1] === "grgtoken-01-scope") {
+        var $subnav = $target.next("ul");
+        var scrollTop = $("#grgtoken-01-scope").offset().top;
+        $root.animate(
+          {
+            scrollTop: scrollTop
+          },
+          250
+        );
+        // $subnav.slideToggle(500);
+      }
     }
   };
-  $genericA.on('click', function() {
+  $genericA.on("click", function() {
     if (window.isMobile) {
-      $window.trigger('close-nav');
+      $window.trigger("close-nav");
     }
   });
-  $navElements.on('click', mainClickCallback);
+  $navElements.on("click", mainClickCallback);
 });
 $(function() {
   var $faqElements = $('.faq-list li');
@@ -211,58 +227,76 @@ $(function() {
   $dataCommunity.on('click', activate);
 });
 $(function() {
-  'use strict';
+  "use strict";
 
-  var $showOnScroll = $('[data-show-on-scroll]');
+  var $showOnScroll = $("[data-show-on-scroll]");
   var $window = $(window);
 
   var setSpy = function() {
     $showOnScroll.each(function() {
       var $this = $(this);
       var initialPosition = $this.offset();
-      if ($(window).scrollTop() > (initialPosition.top - $(window).height())) {
-        $this.addClass('scrolled');
+      if ($(window).scrollTop() > initialPosition.top - $(window).height()) {
+        $this.addClass("scrolled");
       }
       $this.scrollspy({
         min: function() {
           var position = $this.offset();
-          return (position.top - $(window).height());
+          return position.top - $(window).height();
         },
         max: function() {
           return 100000;
         },
         onEnter: function() {
-          var animData = $this.data('customAnimation');
+          var animData = $this.data("customAnimation");
           if (animData) {
             animData.goToAndPlay(0);
           } else {
-            $this.addClass('scrolled');
+            $this.addClass("scrolled");
           }
         }
       });
     });
   };
 
-  $window.on('assets-loaded', function() {
+  $window.on("assets-loaded", function() {
     setSpy();
-    $window.on('refreshSpy', setSpy);
+    $window.on("refreshSpy", setSpy);
   });
-
 });
 $(function() {
-  'use strict';
-  var $home = $('body.home');
+  "use strict";
+  var $home = $("body.home");
   if ($home.length === 0) {
     return;
   }
 
   var $window = $(window);
-  var $nav = $('header');
+  var $nav = $("header");
   var windowHeight;
   var sticky = false;
-  var $root = $('html, body');
-  var $subnav = $nav.find('ul li ul');
-  var $discover = $('.discover-more');
+  var $root = $("html, body");
+  // var $subnav = $("#grg-token-menu")
+  //   .find("ul li ul")
+  //   .addBack("#grg-token-menu");
+
+  var $subnav = $nav.find("ul li ul");
+
+  var $discover = $(".discover-more");
+
+  function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+    return (
+      // elemBottom >= docViewTop &&
+      // elemTop <= docViewBottom &&
+      // elemBottom <= docViewBottom &&
+      // elemTop >= docViewTop
+      docViewTop + 5 >= elemTop
+    );
+  }
 
   var setSizes = function() {
     windowHeight = $window.height();
@@ -270,32 +304,63 @@ $(function() {
 
   var scrollCB = function() {
     var currentScroll = $window.scrollTop();
-    var newSticky = (currentScroll >= windowHeight);
+    var newSticky = currentScroll >= windowHeight;
     if (newSticky != sticky) {
       if (newSticky) {
-        $nav.addClass('sticky');
-        $subnav.slideDown();
+        $nav.addClass("sticky");
+        // $subnav.eq(0).slideDown();
       } else {
-        $nav.removeClass('sticky');
-        $subnav.slideUp();
+        $nav.removeClass("sticky");
+        // $subnav.slideUp();
       }
       sticky = newSticky;
+    }
+
+    if (
+      isScrolledIntoView($("#project-01-what")) &&
+      !isScrolledIntoView($("#grgtoken-01-scope"))
+    ) {
+      // alert("visible");
+      $subnav.eq(1).slideUp();
+      $subnav.eq(0).slideDown();
+    }
+
+    if (
+      isScrolledIntoView($("#grgtoken-01-scope")) &&
+      !isScrolledIntoView($("#grgtoken-07-bluepaper"))
+    ) {
+      // alert("visible");
+      $subnav.eq(0).slideUp();
+      $subnav.eq(1).slideDown();
+    }
+
+    if (isScrolledIntoView($("#grgtoken-07-bluepaper"))) {
+      let bottomPosition =
+        $("#grgtoken-07-bluepaper").offset().top +
+        $("#grgtoken-07-bluepaper").outerHeight();
+      var docViewTop = $(window).scrollTop();
+      if (bottomPosition > docViewTop) {
+        $subnav.eq(1).slideUp();
+      }
     }
   };
 
   var discoverMore = function(e) {
     e.preventDefault();
-    var scrollTop = $('#project-01-what').offset().top;
-    $root.animate({
-      scrollTop: scrollTop
-    }, 500);
-  }
+    var scrollTop = $("#project-01-what").offset().top;
+    $root.animate(
+      {
+        scrollTop: scrollTop
+      },
+      500
+    );
+  };
 
-  $window.on('assets-loaded', function() {
+  $window.on("assets-loaded", function() {
     setSizes();
-    $window.on('scroll', scrollCB);
-    $window.on('resize', setSizes);
-    $discover.on('click', discoverMore);
+    $window.on("scroll", scrollCB);
+    $window.on("resize", setSizes);
+    $discover.on("click", discoverMore);
     scrollCB();
   });
 });
@@ -303,14 +368,14 @@ $(function() {
   var $window = $(window);
   var throttleTime = 1000;
 
-  var currentRoute = '';
-  var gaRoute = '';
+  var currentRoute = "";
+  var gaRoute = "";
   var gaThrottle;
 
-  var throttledGaSend = function () {
+  var throttledGaSend = function() {
     /* Skip execution if we already waiting and execution */
     if (!gaThrottle) {
-      gaThrottle = setTimeout(function () {
+      gaThrottle = setTimeout(function() {
         sendGa();
         gaThrottle = null;
       }, throttleTime);
@@ -326,9 +391,11 @@ $(function() {
       */
       if (gaRoute != currentRoute) {
         if (ga) {
-          var cleanRoute = $(currentRoute.nav).attr('href').split('#');
+          var cleanRoute = $(currentRoute.nav)
+            .attr("href")
+            .split("#");
           if (cleanRoute.length > 1) {
-            ga('send', 'pageview', cleanRoute[1]);
+            ga("send", "pageview", cleanRoute[1]);
           }
         }
         gaRoute = currentRoute;
@@ -336,11 +403,11 @@ $(function() {
     }
   };
 
-  var scroll = new SmoothScroll('[data-scroll]', {
-    offset: function() {
-      return 1;
-    }
-  });
+  // var scroll = new SmoothScroll('[data-scroll]', {
+  //   offset: function() {
+  //     return 1;
+  //   }
+  // });
 
   gumshoe.init({
     offset: 1,
@@ -348,7 +415,7 @@ $(function() {
       /* Trigger throttled ga only if currentRoute has changed */
       if (currentRoute != route) {
         currentRoute = route;
-        throttledGaSend()
+        throttledGaSend();
       }
     }
   });
