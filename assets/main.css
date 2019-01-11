@@ -2387,7 +2387,7 @@ body.IE .intro .icon-logo {
               -ms-flex-order: 1;
                   order: 1;
           margin-left: 0; } }
-    .grgtoken-slides .single-grgtoken-slide.c-grgtoken-01-scope .animation [data-animation] {
+    .grgtoken-slides .single-grgtoken-slide.c-grgtoken-07-grgtoken .animation [data-animation] {
       width: 80%; }
     .grgtoken-slides .single-grgtoken-slide.c-grgtoken-06-principles .slide-wrapper .content, .grgtoken-slides .single-grgtoken-slide.c-grgtoken-05-roadmap .slide-wrapper .content, .grgtoken-slides .single-grgtoken-slide.c-grgtoken-07-partners .slide-wrapper .content {
       width: 100%; }
@@ -2738,15 +2738,15 @@ body.IE .intro .icon-logo {
               -ms-flex-order: 1;
                   order: 1;
           margin-left: 0; } }
-    .project-slides .single-project-slide.c-project-01-what .animation [data-animation] {
+    .project-slides .single-project-slide.c-project-01-concept .animation [data-animation] {
       width: 80%; }
-    .project-slides .single-project-slide.c-project-06-principles .slide-wrapper .content, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .content, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .content {
+    .project-slides .single-project-slide.c-project-05-principles .slide-wrapper .content, .project-slides .single-project-slide.c-project-04-roadmap .slide-wrapper .content, .project-slides .single-project-slide.c-project-06-ecosystem .slide-wrapper .content {
       width: 100%; }
-      .project-slides .single-project-slide.c-project-06-principles .slide-wrapper .content p, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .content p, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .content p {
+      .project-slides .single-project-slide.c-project-05-principles .slide-wrapper .content p, .project-slides .single-project-slide.c-project-04-roadmap .slide-wrapper .content p, .project-slides .single-project-slide.c-project-06-ecosystem .slide-wrapper .content p {
         margin-bottom: 0; }
-    .project-slides .single-project-slide.c-project-06-principles .slide-wrapper .animation, .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .animation, .project-slides .single-project-slide.c-project-07-partners .slide-wrapper .animation {
+    .project-slides .single-project-slide.c-project-05-principles .slide-wrapper .animation, .project-slides .single-project-slide.c-project-04-roadmap .slide-wrapper .animation, .project-slides .single-project-slide.c-project-06-ecosystem .slide-wrapper .animation {
       display: none; }
-    .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper {
+    .project-slides .single-project-slide.c-project-04-roadmap .slide-wrapper {
       display: -webkit-box;
       display: -webkit-flex;
       display: -ms-flexbox;
@@ -2757,9 +2757,9 @@ body.IE .intro .icon-logo {
           -ms-flex-direction: column;
               flex-direction: column;
       min-height: 100vh; }
-      .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper h2 {
+      .project-slides .single-project-slide.c-project-04-roadmap .slide-wrapper h2 {
         margin-bottom: 0; }
-      .project-slides .single-project-slide.c-project-05-roadmap .slide-wrapper .content-wrapper {
+      .project-slides .single-project-slide.c-project-04-roadmap .slide-wrapper .content-wrapper {
         -webkit-box-flex: 1;
         -webkit-flex-grow: 1;
             -ms-flex-positive: 1;
@@ -2769,15 +2769,15 @@ body.IE .intro .icon-logo {
             -ms-flex-align: center;
                     -ms-grid-row-align: center;
                 align-items: center; }
-    .project-slides .single-project-slide.c-project-07-partners .title {
+    .project-slides .single-project-slide.c-project-06-ecosystem .title {
       margin-bottom: 8.3333333333vw; }
-    .project-slides .single-project-slide.c-project-07-partners .building {
+    .project-slides .single-project-slide.c-project-06-ecosystem .building {
       margin-bottom: 10.4166666667vw;
       float: left;
       width: 100%;
       padding-left: 0;
       padding-right: 0; }
-      .project-slides .single-project-slide.c-project-07-partners .building h3 {
+      .project-slides .single-project-slide.c-project-06-ecosystem .building h3 {
         font-size: 2.0833333333vw;
         font-weight: 400;
         line-height: 2.7083333333vw;
@@ -2789,22 +2789,22 @@ body.IE .intro .icon-logo {
         padding-bottom: 0.3472222222vw;
         position: relative; }
         @media (max-width: 1024px) and (min-width: 767px) {
-          .project-slides .single-project-slide.c-project-07-partners .building h3 {
+          .project-slides .single-project-slide.c-project-06-ecosystem .building h3 {
             font-size: 30px;
             font-size: 3rem;
             line-height: 43.5px;
             padding-bottom: 5px;
             margin-bottom: 50px; } }
         @media (max-width: 766px) {
-          .project-slides .single-project-slide.c-project-07-partners .building h3 {
+          .project-slides .single-project-slide.c-project-06-ecosystem .building h3 {
             font-size: 14px;
             font-size: 1.4rem;
             line-height: 20.3px;
             padding-bottom: 5px;
             margin-bottom: 30px; }
-            .project-slides .single-project-slide.c-project-07-partners .building h3:first-child {
+            .project-slides .single-project-slide.c-project-06-ecosystem .building h3:first-child {
               margin-top: 30px; } }
-        .project-slides .single-project-slide.c-project-07-partners .building h3:after {
+        .project-slides .single-project-slide.c-project-06-ecosystem .building h3:after {
           content: ' ';
           position: absolute;
           width: 100%;
@@ -2812,7 +2812,7 @@ body.IE .intro .icon-logo {
           left: 0;
           bottom: 0;
           background: #054186; }
-      .project-slides .single-project-slide.c-project-07-partners .building ul {
+      .project-slides .single-project-slide.c-project-06-ecosystem .building ul {
         float: left;
         width: 100%;
         padding-left: 0;
@@ -2833,7 +2833,7 @@ body.IE .intro .icon-logo {
             -ms-flex-wrap: wrap;
                 flex-wrap: wrap; }
         @media (max-width: 1024px) and (min-width: 767px) {
-          .project-slides .single-project-slide.c-project-07-partners .building ul {
+          .project-slides .single-project-slide.c-project-06-ecosystem .building ul {
             margin-bottom: 30px;
             margin-top: 30px;
             -webkit-box-align: center;
@@ -2842,25 +2842,25 @@ body.IE .intro .icon-logo {
                         -ms-grid-row-align: center;
                     align-items: center; } }
         @media (max-width: 766px) {
-          .project-slides .single-project-slide.c-project-07-partners .building ul {
+          .project-slides .single-project-slide.c-project-06-ecosystem .building ul {
             margin-bottom: 50px;
             -webkit-box-align: center;
             -webkit-align-items: center;
                 -ms-flex-align: center;
                         -ms-grid-row-align: center;
                     align-items: center; } }
-        .project-slides .single-project-slide.c-project-07-partners .building ul li {
+        .project-slides .single-project-slide.c-project-06-ecosystem .building ul li {
           width: auto;
           margin-right: 120px;
           padding-left: 0 !important;
           padding-right: 0 !important; }
           @media (max-width: 766px) {
-            .project-slides .single-project-slide.c-project-07-partners .building ul li {
+            .project-slides .single-project-slide.c-project-06-ecosystem .building ul li {
               margin-right: 40px;
               margin-bottom: 50px; } }
-          .project-slides .single-project-slide.c-project-07-partners .building ul li img {
+          .project-slides .single-project-slide.c-project-06-ecosystem .building ul li img {
             float: left; }
-        .project-slides .single-project-slide.c-project-07-partners .building ul:not(.b) img {
+        .project-slides .single-project-slide.c-project-06-ecosystem .building ul:not(.b) img {
           max-width: 80%; }
 
 .token-sale-block {

@@ -171,9 +171,9 @@ $(function() {
     var currentUrl = window.location.href.split("#")[0];
     if (linkTarget[0] === currentUrl) {
       e.preventDefault();
-      if (linkTarget[1] === "project-01-what") {
+      if (linkTarget[1] === "project-01-concept") {
         var $subnav = $target.next("ul");
-        var scrollTop = $("#project-01-what").offset().top;
+        var scrollTop = $("#project-01-concept").offset().top;
         $root.animate(
           {
             scrollTop: scrollTop
@@ -182,9 +182,9 @@ $(function() {
         );
         // $subnav.slideToggle(500);
       }
-      if (linkTarget[1] === "grgtoken-01-scope") {
+      if (linkTarget[1] === "grgtoken-07-grgtoken") {
         var $subnav = $target.next("ul");
-        var scrollTop = $("#grgtoken-01-scope").offset().top;
+        var scrollTop = $("#grgtoken-07-grgtoken").offset().top;
         $root.animate(
           {
             scrollTop: scrollTop
@@ -317,8 +317,8 @@ $(function() {
     }
 
     if (
-      isScrolledIntoView($("#project-01-what")) &&
-      !isScrolledIntoView($("#grgtoken-01-scope"))
+      isScrolledIntoView($("#project-01-concept")) &&
+      !isScrolledIntoView($("#grgtoken-07-grgtoken"))
     ) {
       // alert("visible");
       $subnav.eq(1).slideUp();
@@ -326,18 +326,18 @@ $(function() {
     }
 
     if (
-      isScrolledIntoView($("#grgtoken-01-scope")) &&
-      !isScrolledIntoView($("#grgtoken-07-bluepaper"))
+      isScrolledIntoView($("#grgtoken-07-grgtoken")) &&
+      !isScrolledIntoView($("#grgtoken-08-utility"))
     ) {
       // alert("visible");
       $subnav.eq(0).slideUp();
       $subnav.eq(1).slideDown();
     }
 
-    if (isScrolledIntoView($("#grgtoken-07-bluepaper"))) {
+    if (isScrolledIntoView($("#grgtoken-08-utility"))) {
       let bottomPosition =
-        $("#grgtoken-07-bluepaper").offset().top +
-        $("#grgtoken-07-bluepaper").outerHeight();
+        $("#grgtoken-08-utility").offset().top +
+        $("#grgtoken-08-utility").outerHeight();
       var docViewTop = $(window).scrollTop();
       if (bottomPosition > docViewTop) {
         $subnav.eq(1).slideUp();
@@ -347,7 +347,7 @@ $(function() {
 
   var discoverMore = function(e) {
     e.preventDefault();
-    var scrollTop = $("#project-01-what").offset().top;
+    var scrollTop = $("#project-01-concept").offset().top;
     $root.animate(
       {
         scrollTop: scrollTop
@@ -433,7 +433,7 @@ $(function() {
     + videoId + '?autoplay=1&rel=0&showinfo=0&modestbranding=1&controls=0" frameborder="0" allowfullscreen></iframe><div data-close-video class="close"></div></div></div></div>';
     $div.html(iframeMarkup);
     $body.append($div);
-    var scrollTop = $('#project-01-what').offset().top;
+    var scrollTop = $('#project-01-concept').offset().top;
     $root.animate({
       scrollTop: scrollTop
     }, 500);
