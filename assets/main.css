@@ -93,7 +93,7 @@ img {
   height: auto; }
 
 /* ie 8 img max-width */
-@media \0screen {
+@media \0 screen {
   img {
     width: auto; } }
 ul, ol {
